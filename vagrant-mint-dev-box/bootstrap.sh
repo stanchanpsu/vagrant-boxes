@@ -42,7 +42,7 @@ VBoxClient --display
 VBoxClient --checkhostversion
 VBoxClient --seamless
 
-# pgrade pip3
+# upgrade pip3
 pip3 install --upgrade pip
 
 # install virtualenv and wrapper
@@ -50,8 +50,22 @@ pip3 install setuptools
 pip3 install virtualenv
 pip3 install virtualenvwrapper
 
-# echo configurations
+# pip, venv configurations
 echo "export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3" >> /home/vagrant/.bashrc
 echo "export WORKON_HOME=~/Envs" >> /home/vagrant/.bashrc
 echo "source /usr/local/bin/virtualenvwrapper.sh" >> /home/vagrant/.bashrc
 echo "alias pip='pip3'" >> /home/vagrant/.bash_aliases
+
+# aliases
+echo "alias ga='git add .'" >> /home/vagrant/.bash_aliases
+echo "alias gcm='git commit -m'" >> /home/vagrant/.bash_aliases
+echo "alias gp='git push'" >> /home/vagrant/.bash_aliases
+echo "alias gs='git status'" >> /home/vagrant/.bash_aliases
+echo "alias led='xset led 3'" >> /home/vagrant/.bash_aliases
+
+# Configure git
+git config --global user.name "Stan Chan"
+git config --global user.email stanchanpsu@outlook.com
+git config --global credential.helper cache
+git config --global credential.helper "cache --timeout=360000"
+git config --global push.default matching
