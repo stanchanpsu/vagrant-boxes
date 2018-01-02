@@ -28,7 +28,7 @@ Be sure that you are in the same directory as the Vagrantfile when running these
 
 ### Cleaning Up a VM
 - `vagrant destroy`     -- stops and deletes all traces of the vagrant machine
-- `vagrant destroy -f   -- same as above, without confirmation
+- `vagrant destroy -f`   -- same as above, without confirmation
 
 ### Boxes
 - `vagrant box list`              -- see a list of all installed boxes on your computer
