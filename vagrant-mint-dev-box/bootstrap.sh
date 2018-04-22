@@ -10,6 +10,7 @@ curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -
 
 # update packages
 apt-get update
+apt-get upgrade
 
 # packages to install
 packagelist=(
@@ -47,12 +48,9 @@ pip3 install --upgrade pip
 
 # install virtualenv and wrapper
 pip3 install setuptools
-pip3 install virtualenv
-pip3 install virtualenvwrapper
+pip3 install pipenv
 
 # pip, venv configurations
-echo "export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3" >> /home/vagrant/.bashrc
-echo "export WORKON_HOME=~/Envs" >> /home/vagrant/.bashrc
 echo "source /usr/local/bin/virtualenvwrapper.sh" >> /home/vagrant/.bashrc
 echo "alias pip='pip3'" >> /home/vagrant/.bash_aliases
 
