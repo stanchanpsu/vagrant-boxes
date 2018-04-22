@@ -26,9 +26,6 @@ packagelist=(
     # vscode
     code
 
-    # pip3
-    python3-pip
-
     # nodejs
     nodejs
 )
@@ -43,16 +40,14 @@ VBoxClient --display
 VBoxClient --checkhostversion
 VBoxClient --seamless
 
-# upgrade pip3
-pip3 install --upgrade pip
+# install and upgrade pip
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+python get-pip.py
+rm get-pip.py
+pip install --upgrade pip
 
-# install virtualenv and wrapper
-pip3 install setuptools
-pip3 install pipenv
-
-# pip, venv configurations
-echo "source /usr/local/bin/virtualenvwrapper.sh" >> /home/vagrant/.bashrc
-echo "alias pip='pip3'" >> /home/vagrant/.bash_aliases
+# install pipenv
+pip install pipenv
 
 # aliases
 echo "alias ga='git add .'" >> /home/vagrant/.bash_aliases

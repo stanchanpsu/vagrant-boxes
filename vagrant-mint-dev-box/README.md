@@ -10,8 +10,4 @@
 * nodejs
 * vscode
 * git
-
-## Usage
-
-1. `vagrant up`
-1. `vagrant ssh` or virtual-box
+* pipenv
