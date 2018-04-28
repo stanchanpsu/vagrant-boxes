@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Install curl
+apt install -y curl
+
 # get vscode repo
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
 mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
