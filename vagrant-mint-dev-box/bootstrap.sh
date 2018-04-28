@@ -58,6 +58,8 @@ echo "alias gcm='git commit -m'" >> /home/vagrant/.bash_aliases
 echo "alias gp='git push'" >> /home/vagrant/.bash_aliases
 echo "alias gs='git status'" >> /home/vagrant/.bash_aliases
 echo "alias led='xset led 3'" >> /home/vagrant/.bash_aliases
+echo "alias bp='code ~/.bashrc'"  >> /home/vagrant/.bash_aliases
+echo "alias sbp='source ~/.bashrc'"  >> /home/vagrant/.bash_aliases
 
 # Configure git
 git config --global user.name "Stan Chan"
