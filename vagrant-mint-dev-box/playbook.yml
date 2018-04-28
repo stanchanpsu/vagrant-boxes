@@ -1,0 +1,4 @@
+- hosts: dev
+  remote_user: root
+  tasks:
+    - name: 

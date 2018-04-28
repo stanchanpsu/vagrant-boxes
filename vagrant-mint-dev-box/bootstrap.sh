@@ -6,11 +6,11 @@ mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
 sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
 
 # get node repo
-curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 
 # update packages
-apt-get update
-apt-get upgrade
+apt update
+apt upgrade
 
 # packages to install
 packagelist=(
@@ -31,7 +31,7 @@ packagelist=(
 )
 
 # install
-apt-get install -y ${packagelist[@]}
+apt install -y ${packagelist[@]}
 
 # start virtualbox client
 VBoxClient --clipboard
