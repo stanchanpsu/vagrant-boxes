@@ -1,4 +1,19 @@
 - hosts: dev
   remote_user: root
   tasks:
-    - name: 
+    - name: install virtualbox-guest-dkms
+      package:
+        name: virtualbox-guest-dkms
+        state: present
+    - name: install virtualbox-guest-utils
+      package:
+        name: virtualbox-guest-utils
+        state: present
+    - name: install virtualbox
+      package:
+        name: virtualbox
+        state: present
+    - name: install git
+      package:
+        name: git
+        state: present
