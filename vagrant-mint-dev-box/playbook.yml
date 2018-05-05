@@ -17,3 +17,10 @@
       package:
         name: git
         state: present
+    - name: download vscode install package
+      get_url:
+        url: https://go.microsoft.com/fwlink/?LinkID=760868
+        dest: /home/{{ ansible_env.USER }}/vscode.deb
+    - name: install vscode
+      apt:
+        deb: /home/{{ ansible_env.USER }}/vscode.deb
